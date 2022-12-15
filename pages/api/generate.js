@@ -7,8 +7,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `Write me a lengthy and detailed statement of purpose for a master's university application to a department. The statement should be in the style of Paul Graham writing an application with the title below. Please make sure the document goes in-depth on the topic, shows that the writer did their research, show creativity
-University: *user-input
-Title:`;
+University: *user-input`;
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
